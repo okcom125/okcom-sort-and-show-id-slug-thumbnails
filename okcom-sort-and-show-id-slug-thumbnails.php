@@ -17,7 +17,7 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 		const DOMAIN = "OkcomSortnShowIdSlugThumbnails";
 
 		public function __construct(){
-			
+
 			//テキストドメインに基づいて翻訳ファイルを読み込み
 			load_plugin_textdomain(self::DOMAIN, false, basename( dirname( __FILE__ ) ).'/languages' );
 
@@ -63,10 +63,10 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		//index
 		public function add_posts_columns($columns) {
-			$columns['thumbnail'] = __( 'Thumbnail', DOMAIN );
+			$columns['thumbnail'] = __( 'Thumbnail', 'DOMAIN' );
 			$columns['postid'] = 'ID';
-			$columns['slug'] = __( 'Slug', DOMAIN );
-			$columns['count'] = __( 'Count', DOMAIN );
+			$columns['slug'] = __( 'Slug', 'DOMAIN' );
+			$columns['count'] = __( 'Count', 'DOMAIN' );
 
 			//CSSのクラス名は、.column-[インデックス名]　となる。CSSは外部ファイルで指定する。
 
@@ -100,10 +100,10 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		//sort
 		function sort_posts_columns($columns) {
-			//$columns['thumbnail'] = __( 'Thumbnail', DOMAIN );
+			//$columns['thumbnail'] = __( 'Thumbnail', 'DOMAIN' );
 			$columns['postid'] = 'ID';
-			$columns['slug'] = __( 'Slug', DOMAIN );
-			$columns['count'] = __( 'Count', DOMAIN );
+			$columns['slug'] = __( 'Slug', 'DOMAIN' );
+			$columns['count'] = __( 'Count', 'DOMAIN' );
 			return $columns;
 		}
 
@@ -115,9 +115,9 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 		//index
 		public function add_pages_columns($columns) {
 
-			$columns['thumbnail'] = __( 'Thumbnail', DOMAIN );
+			$columns['thumbnail'] = __( 'Thumbnail', 'DOMAIN' );
 			$columns['postid'] = 'ID';
-			$columns['slug'] = __( 'Slug', DOMAIN );
+			$columns['slug'] = __( 'Slug', 'DOMAIN' );
 
 			wp_register_style( 'showthumbstyle', plugins_url('css/style.css', __FILE__ ) );
 			wp_enqueue_style( 'showthumbstyle' );
@@ -140,10 +140,10 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		//sort
 		function sort_pages_columns($columns) {
-			//$columns['thumbnail'] = __( 'Thumbnail', DOMAIN );
+			//$columns['thumbnail'] = __( 'Thumbnail', 'DOMAIN' );
 			$columns['postid'] = 'ID';
-			$columns['slug'] = __( 'Slug', DOMAIN );
-			//$columns['count'] = __( 'Count', DOMAIN );
+			$columns['slug'] = __( 'Slug', 'DOMAIN' );
+			//$columns['count'] = __( 'Count', 'DOMAIN' );
 			return $columns;
 		}
 
