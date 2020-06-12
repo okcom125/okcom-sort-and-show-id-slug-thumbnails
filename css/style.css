@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.fixed .column-thumbnail {
+	width: 150px;
+}
+
+.fixed .column-postid {
+	width: auto;
+}
+
+.fixed .column-slug {
+	width: auto;
+}
+
+.fixed .column-count {
+	width: auto;
+}
