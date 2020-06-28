@@ -3,7 +3,7 @@
 /*
 Plugin Name:OKCOM Sort and Show ID Slug Thumbnails
 Plugin URI:https://www.ok-computer.jp
-Description:// ソート機能付きで、ID・スラッグ・サムネイル・文字カウントを表示するプラグインです。
+Description:With sorting function, ID, slug, thumbnail, and character count are displayed.
 Version:1.00
 Author:OK COMPUTER
 Author URI:https://www.ok-computer.jp
@@ -18,7 +18,6 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		public function __construct(){
 
-			//テキストドメインに基づいて翻訳ファイルを読み込み
 			load_plugin_textdomain(self::DOMAIN, false, basename( dirname( __FILE__ ) ).'/languages' );
 
 			// =================================================
@@ -68,14 +67,9 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 			$columns['slug'] = __( 'Slug', 'DOMAIN' );
 			$columns['count'] = __( 'Count', 'DOMAIN' );
 
-			//CSSのクラス名は、.column-[インデックス名]　となる。CSSは外部ファイルで指定する。
-
-			//プラグイン用のCSSを登録（resister）し、呼び出し（enqueue）
 			wp_register_style( 'showthumbstyle', plugins_url('css/style.css', __FILE__ ) );
 			wp_enqueue_style( 'showthumbstyle' );
-			//plugins_url( $path, $plugin ); 　$plugin パラメータ（第２引数）に __FILE__ PHP マジック定数を渡すと、$path はそのプラグインファイルの親ディレクトリーからの相対パスと見なされます:
 
-			//設定した値を返す
 			return $columns;
 		}
 
@@ -92,15 +86,11 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 		    } elseif ( 'count' == $column_name ) {
 		        $count = mb_strlen(strip_tags(get_post_field('post_content', $post_id)));
 		        echo $count;
-		        //mb_strlen:文字数取得
-		        //strip_tags:htmlタグなどの排除
-		        //get_post_field:投稿情報の要素を取得　投稿情報の要素名（'post_title'、'post_content'、'post_excerpt'、'post_date'、'post_status'など）を指定。
 		    }
 		}
 
 		//sort
 		function sort_posts_columns($columns) {
-			//$columns['thumbnail'] = __( 'Thumbnail', 'DOMAIN' );
 			$columns['postid'] = 'ID';
 			$columns['slug'] = __( 'Slug', 'DOMAIN' );
 			$columns['count'] = __( 'Count', 'DOMAIN' );
@@ -140,10 +130,8 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		//sort
 		function sort_pages_columns($columns) {
-			//$columns['thumbnail'] = __( 'Thumbnail', 'DOMAIN' );
 			$columns['postid'] = 'ID';
 			$columns['slug'] = __( 'Slug', 'DOMAIN' );
-			//$columns['count'] = __( 'Count', 'DOMAIN' );
 			return $columns;
 		}
 
@@ -172,10 +160,7 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		//sort
 		function sort_media_columns($columns) {
-			//$columns['thumbnail'] = 'サムネイル';
 			$columns['postid'] = 'ID';
-			//$columns['slug'] = 'スラッグ';
-			//$columns['count'] = '文字カウント';
 			return $columns;
 		}
 
@@ -204,10 +189,7 @@ if( !class_exists( 'Okcom_Sort_And_Show_Id_Slug_Thumbnails' )){
 
 		//sort
 		function sort_comment_columns($columns) {
-			//$columns['thumbnail'] = 'サムネイル';
 			$columns['postid'] = 'ID';
-			//$columns['slug'] = 'スラッグ';
-			//$columns['count'] = '文字カウント';
 			return $columns;
 		}
 
