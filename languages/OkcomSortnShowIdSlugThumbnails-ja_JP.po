@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OK COMPUTER\n"
+"POT-Creation-Date: 2020-06-28 12:42+0900\n"
+"PO-Revision-Date: 2020-06-28 12:42+0900\n"
+"Last-Translator: OK COMPUTER <okcom125@ok-computer.jp>\n"
+"Language-Team: okcom125@ok-computer.jp\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: okcom-sort-and-show-id-slug-thumbnails.php\n"
+
+#: okcom-sort-and-show-id-slug-thumbnails.php:65
+#: okcom-sort-and-show-id-slug-thumbnails.php:108
+msgid "Thumbnail"
+msgstr "サムネイル"
+
+#: okcom-sort-and-show-id-slug-thumbnails.php:67
+#: okcom-sort-and-show-id-slug-thumbnails.php:95
+#: okcom-sort-and-show-id-slug-thumbnails.php:110
+#: okcom-sort-and-show-id-slug-thumbnails.php:134
+msgid "Slug"
+msgstr "スラッグ"
+
+#: okcom-sort-and-show-id-slug-thumbnails.php:68
+#: okcom-sort-and-show-id-slug-thumbnails.php:96
+msgid "Count"
+msgstr "文字カウント"
