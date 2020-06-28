@@ -2,7 +2,7 @@
 <?php
 /*
 Plugin Name:OKCOM Sort and Show ID Slug Thumbnails
-Plugin URI:https://www.ok-computer.jp
+Plugin URI:https://www.ok-computer.jp/wordpress/plugin/
 Description:With sorting function, ID, slug, thumbnail, and character count are displayed.
 Version:1.00
 Author:OK COMPUTER
